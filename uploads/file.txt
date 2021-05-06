@@ -1,0 +1,2 @@
+Add to git repo
+this upload folder is not gonna be accessible bydefault so we have to make manualy static folder so anyone can access it 

@@ -31,7 +31,9 @@ app.use('/api/users', userRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/upload', uploadRoutes);
 
-app.get('/api/config/paypal', (req, res) => res.send(process.env.PAYPAL_CLIENT_ID));
+app.get('/api/config/paypal', (req, res) =>
+  res.send(process.env.PAYPAL_CLIENT_ID)
+);
 
 // making upload folder static
 // yahan pa ya __dirname tab hi sahi work karta hai jab hum isa common js formate ma ya require wale formate ma use karain Es6 ya import ma ya us tarha sa work nhi karta so is ko wesa behavior get karna ka lia hum ya nicha aak line of code kar raha hain // const __dirname = path.resolve()
@@ -49,5 +51,7 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(
   PORT,
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold)
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+  )
 );
